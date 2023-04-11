@@ -6,4 +6,4 @@
 * This project is built to show dynamic routing.
 * The homepage is also responsive for mobile device.
  
-[Project Live Link:] (https://bejewelled-gingersnap-585434.netlify.app )
+[Project Live Link](https://bejewelled-gingersnap-585434.netlify.app)
