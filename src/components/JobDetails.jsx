@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const JobDetails = () => {
   const { jobCardId } = useParams();
   const dataDetails = useLoaderData();
 
   const [details, setDetails] = useState({});
+  const [appliedJobs, setAppliedJobs] = useState([]);
 
   useEffect(() => {
     const jobDetails = dataDetails.find(
@@ -13,6 +16,19 @@ const JobDetails = () => {
     );
     setDetails(jobDetails || {});
   }, [jobCardId, dataDetails]);
+
+   const handleApplyNow = () => {
+    const { id, companyName, jobTitle } = details;
+    const appliedJob = { id, companyName, jobTitle };
+    if (appliedJobs.some((job) => job.id === id)) {
+      toast.error("You have already applied for this job");
+    } else {
+      setAppliedJobs([...appliedJobs, appliedJob]);
+      const savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || [];
+      localStorage.setItem("savedJobs", JSON.stringify([...savedJobs, appliedJob]));
+      // toast.success("Job application saved");
+    }
+  };
 
   return (
     <div>
@@ -117,10 +133,11 @@ const JobDetails = () => {
           </div>
 
           <div className="my-8">
-            <button className="btn-primary w-full">Apply Now</button>
+            <button className="btn-primary w-full" onClick={handleApplyNow}>Apply Now</button>
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
