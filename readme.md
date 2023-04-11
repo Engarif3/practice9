@@ -5,5 +5,6 @@
 * Blog option shows Question and Answers regarding four react hooks.
 * This project is built to show dynamic routing.
 * The homepage is also responsive for mobile device.
- 
-Click here for:[Project Live Link](https://bejewelled-gingersnap-585434.netlify.app)
+
+#### Click below for the project live link:
+[Project Live Link](https://bejewelled-gingersnap-585434.netlify.app)
