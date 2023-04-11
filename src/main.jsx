@@ -17,10 +17,12 @@ import AppliedJobs from './components/AppliedJobs';
 import Blog from './components/Blog';
 import JobDetails from './components/JobDetails';
 import Assignment from './components/Assignment';
+import ErrorPage from './components/ErrorPage';
 const router = createBrowserRouter([
   {
     path:'/',
     element: <Layout></Layout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path:'/',
