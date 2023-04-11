@@ -13,9 +13,10 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import JobLists from './components/JobLists';
 import AppliedJobs from './components/AppliedJobs';
-import Statistics from './components/Statistics';
+// import Statistics from './components/Statistics';
 import Blog from './components/Blog';
 import JobDetails from './components/JobDetails';
+import Assignment from './components/Assignment';
 const router = createBrowserRouter([
   {
     path:'/',
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/statistics',
-        element: <Statistics></Statistics>
+        element: <Assignment></Assignment>
       },
       {
         path:'/blog',

@@ -17,7 +17,7 @@ const JobDetails = () => {
   return (
     <div>
       <div className="flex justify-between items-center gap-10 ">
-        <div className="w-2/4 border-2 m-auto p-8  flex flex-col gap-4">
+        <div className="w-2/4 border rounded-lg m-auto p-8  flex flex-col gap-4">
           <p>
             <span className="font-bold">Job Description:</span>{" "}
             <span className="text-[#757575]">
@@ -44,7 +44,7 @@ const JobDetails = () => {
           </p>
         </div>
         <div className=" p-8 m-auto w-1/4">
-          <div className="border-2 rounded-lg p-8 bg-[#EAE3FF]">
+          <div className=" rounded-lg p-8 bg-[#EAE3FF]">
             <h2 className="text-lg font-bold">Job Details</h2>
             <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-400"></hr>
             <div className="flex flex-col gap-2 mb-4">
