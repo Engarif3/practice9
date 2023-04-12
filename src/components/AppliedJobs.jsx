@@ -1,4 +1,6 @@
 import React from "react";
+import image1 from '../assets/All Images/Vector.png'
+import image2 from '../assets/All Images/Vector-1.png'
 
 import AppliedjobViewDetails from "./AppliedjobViewDetails";
 
@@ -10,9 +12,21 @@ const AppliedJobs = () => {
   }
 
   return (
+    
     <div>
-     
+        
+        <div>
+
+        <img  className="absolute top-0 right-0 transform scale-x-1" src={image2} alt="banner" />
+        <div className="flex justify-center items-center">
+          <h2 className="text-5xl font-bold">Applied Jobs</h2>
+        </div>
+        <img className="absolute top-24"  src={image1} alt="banner" /> 
+        </div>
+        <div className="mt-56">
+
         {appliedJobs.map((job) => <AppliedjobViewDetails key={job.id} job={job}></AppliedjobViewDetails> )}
+        </div>
       
     </div>
   );

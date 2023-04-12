@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import image1 from '../assets/All Images/Vector.png'
+import image2 from '../assets/All Images/Vector-1.png'
 
 const JobDetails = () => {
   const { jobCardId } = useParams();
@@ -32,7 +34,11 @@ const JobDetails = () => {
 
   return (
     <div>
-      <div className="flex justify-between items-center gap-10 ">
+       <div  className="banner mb-40 bg-slate-500">
+        <img  className="absolute top-0 right-0 transform scale-x-1" src={image2} alt="banner" />
+        <img className="absolute top-24"  src={image1} alt="banner" /> 
+      </div>
+      <div className="flex justify-between items-center gap-10  mt-12">
         <div className="w-2/4 border rounded-lg m-auto p-8  flex flex-col gap-6">
           <p>
             <span className="font-bold">Job Description:</span>{" "}
@@ -59,6 +65,7 @@ const JobDetails = () => {
             </span>
           </p>
         </div>
+
         <div className=" p-4 m-auto w-1/4">
           <div className=" rounded-lg p-8 bg-[#EAE3FF]">
             <h2 className="text-lg font-bold">Job Details</h2>
