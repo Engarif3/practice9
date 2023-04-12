@@ -18,8 +18,8 @@ const JobDetails = () => {
   }, [jobCardId, dataDetails]);
 
    const handleApplyNow = () => {
-    const { id, companyName, jobTitle } = details;
-    const appliedJob = { id, companyName, jobTitle };
+    const { id, companyName, jobTitle,jobLocation, img, salary, jobType } = details;
+    const appliedJob = { id, companyName, jobTitle,jobLocation, img, salary, jobType };
     if (appliedJobs.some((job) => job.id === id)) {
       toast.error("You have already applied for this job");
     } else {
